@@ -7,15 +7,21 @@ public class LambdaWithList {
 
 	public static void main(String[] args) {
 		List<Person> people =  new ArrayList<Person>();
-		people.add(new Person("pranav", "nandedkar"));
-		people.add(new Person("A", "nandedkar"));
-		people.add(new Person("B", "nandedkar"));
-		people.add(new Person("C", "nandedkar"));
-		people.add(new Person("D", "nandedkar"));
+		
+		for (int i= 0 ; i <10; i++){
+			people.add(new Person("pranav", "nandedkar"));
+			people.add(new Person("A", "nandedkar"));
+			people.add(new Person("B", "nandedkar"));
+			people.add(new Person("C", "nandedkar"));
+			people.add(new Person("D", "nandedkar"));
+		}
 		
 		
 		
+	
 		
+		
+		//		
 		people.forEach(x->System.out.println(x.getName()));
 		people.forEach(System.out::println);
 		people.forEach(LambdaWithList::write);
