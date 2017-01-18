@@ -8,7 +8,7 @@ public class LambdaWithStreams {
 	public static void main(String[] args) {
 		List<Person> people =  new ArrayList<Person>();
 		
-		for (int i= 0 ; i <100000; i++){
+		for (int i= 0 ; i <10000; i++){
 			people.add(new Person("pranav", "nandedkar"));
 			people.add(new Person("A", "nandedkar"));
 			people.add(new Person("B", "nandedkar"));
@@ -16,7 +16,9 @@ public class LambdaWithStreams {
 			people.add(new Person("D", "nandedkar"));
 		}
 		
-		
+		/*
+		 * parellel streams....
+		 */
 		
 		long start = System.currentTimeMillis();
 		people.parallelStream()
@@ -33,6 +35,11 @@ public class LambdaWithStreams {
 		System.out.println(end - start);
 
 		
+		
+		
+		/*
+		 * normal streams....
+		 */
 		long start1 = System.currentTimeMillis();
 
 		people.stream()
